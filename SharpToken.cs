@@ -1355,6 +1355,7 @@ namespace SharpToken
             startupInfo.hStdOutput = childProcessStdOutWrite;
             startupInfo.hStdInput = IntPtr.Zero;
             startupInfo.dwFlags = (int)NativeMethod.STARTF_USESTDHANDLES;
+            startupInfo.lpDesktop = "WinSta0\\Default";
 
             NativeMethod.SetHandleInformation(childProcessStdOutRead, NativeMethod.HANDLE_FLAG_INHERIT, NativeMethod.HANDLE_FLAG_INHERIT);
             NativeMethod.SetHandleInformation(childProcessStdOutWrite, NativeMethod.HANDLE_FLAG_INHERIT, NativeMethod.HANDLE_FLAG_INHERIT);
